@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<head >
+   
+    <title>Car Price Predictor</title>
+    <link rel="stylesheet" href="style.css">
+ 
+       
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+</head>
+<body class="bg-dark">
+
+<div class="container">
+    <div class="row">
+        <div class="card mt-50" style="width: 100%; height: 100%">
+            <div class="card-header" style="text-align: center">
+                <h1  >Welcome to Car Price Predictor</h1>
+            </div>
+            <div class="card-body">
+                <div class="col-12" style="text-align: center">
+                    <h5>This app predicts the price of a car you want to sell. Try filling the details below: </h5>
+                </div>
+                <br>
+                <form>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Select the company:</b> </label><br>
+                        <select class="selectpicker form-control" id="company" name="company" required="1">
+                           
+                            <option >SELECT THE COMPANY</option>
+                            <option >BMW</option>
+                            <option>AUDI</option>
+                            <option>BENZ</option>
+                            <option >TATA</option>
+                           
+                            
+                        </select>
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Select the model:</b> </label><br>
+                        <select class="selectpicker form-control" id="car_models" name="car_models" required="8">
+                            <option >SELECT THE MODEL</option>
+                            <option >SUV</option>
+                            <option >JEEP</option>
+                            <option >CASUAL</option>
+                            <option >SPORT</option>
+                            <option>COUPE</option>
+                            <option >MINIVAN</option>
+                            <option >HATCHBACK</option>
+                        </select>
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Select Year of Purchase:</b> </label><br>
+                        <select class="selectpicker form-control" id="year" name="year" required="13">
+                            
+                            <option >SELECT THE YEAR </option>
+                            <option >2011</option>
+                            <option >2012</option>
+                            <option >2013</option>
+                            <option >2014</option>
+                            <option >2015</option>
+                            <option >2016</option>
+                            <option >2017</option>
+                            <option >2018</option>
+                            <option >2019</option>
+                            <option >2020</option>
+                            <option >2021</option>
+                            <option >2022</option>
+                           
+                        </select>
+
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Select Month of Purchase:</b> </label><br>
+                        <select class="selectpicker form-control" id="year" name="year" required="13">
+                            
+                            <option >SELECT THE Month </option>
+                            <option >January</option>
+                            <option >February</option>
+                            <option >March</option>
+                            <option >April</option>
+                            <option >May</option>
+                            <option >June</option>
+                            <option >July</option>
+                            <option >August</option>
+                            <option >September</option>
+                            <option >October</option>
+                            <option >November</option>
+                            <option >December</option>
+                           
+                        </select>
+                        
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Select the Fuel Type:</b> </label><br>
+                        <select class="selectpicker form-control" id="fuel_type" name="fuel_type" required="5">
+                            
+                            <option >ENTER FUEL TYPE</option> 
+                            <option >PETROL</option>
+                            <option >DIESEL</option>
+                            <option >GAS</option>
+                           
+                        </select>
+                    </div>
+
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Your car is damaged or repair:</b> </label><br>
+                        <select class="selectpicker form-control" id="fuel_type" name="fuel_type" required="4">
+                            
+                            <option >Select the type</option> 
+                            <option >Yes</option>
+                            <option >No</option>
+                            <option >Not declared</option>
+                           
+                        </select>
+                    </div>
+
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Enter the Number of Kilometres that the car has travelled:</b> </label><br>
+                        <input type="text" class="form-control" id="kilo_driven" name="kilo_driven"
+                               placeholder="ENTER THE KILOMETRES DRIVEN ">
+                    </div>
+
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <label><b>Power of car PS:</b> </label><br>
+                        <input type="text" class="form-control" id="kilo_driven" name="kilo_driven"
+                               placeholder="ENTER THE PS VALUE">
+                    </div>
+                    <div class="col-md-10 form-group" style="text-align: center">
+                        <form action="predict.html">
+                            <button class="btn btn-primary btn-lg">Predict Price</button>
+                        </form>
+                        
+                    </div>
+                    
+                </form>
+                
+                
+            </div>
+            
+        </div>
+    </div>
+   
+</div>
+
+
+
+</body>
+</html>

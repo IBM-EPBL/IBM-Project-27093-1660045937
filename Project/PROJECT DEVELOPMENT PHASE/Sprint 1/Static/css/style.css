@@ -1,0 +1,36 @@
+.{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg-dark{
+	background-color: #75767B;
+}
+
+
+.mt-50{
+	margin-top: 50px;
+}
+#canvas{
+    border: 2px solid black;
+}
+h1{
+    background-color: rgb(1, 17, 10);
+    color: aliceblue;
+}
+.txt{
+float: right;    
+margin: 0 15px 0 0;
+}
+.im {
+position: relative;
+text-align: center;
+color: white;
+}
+.centered {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: large;
+}
